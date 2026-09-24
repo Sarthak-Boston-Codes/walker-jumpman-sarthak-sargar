@@ -23,7 +23,10 @@ Enter to start · A/D or arrow keys to move · Space to jump · R to retry · Es
 - **Level:** added a new section, "Two-Step Crossing," past the original finish — two new required-jump landings, a spike hazard, and the finish flag relocated to the far landing. The original two zones are unchanged and still fully playable.
 
 ## Known limitations
-[fill in after TEST-REPORT.md is complete]
+- **Early full jump reaches Landing 1.** A full held jump taken early off the original ledge (takeoff x ≈ 900–940) lands on Landing 1, so holding right for both Two-Step jumps can succeed. Accepted, not a bug — see CHANGE-BRIEF.md Revisions.
+- **Reduced beak-to-body contrast.** The body color fix (orange `f07a2a`, for contrast against the spikes) lowered contrast between the yellow beak and the body to about 1.5:1. Not yet confirmed in live play.
+- **Hint text may overlap the committed jump.** The jump from Landing 1 passes through the "Short hop. Then commit." hint. Whether this is distracting is not yet confirmed.
+- **HUD reads ~99.2% at flag trigger.** The finish triggers when the collider touches the flag, slightly before the progress span ends. Cosmetic; not fixed.
 
 ## Final film
 [link — add once the Brutalist walkthrough is rendered]

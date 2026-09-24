@@ -43,4 +43,16 @@ These cycles came from machine inspection during the build; the human playtest c
 - Progress reads ~99.2% at the instant the flag triggers (collider touches the flag before x reaches 1236).
 
 ## Playtester
-[Your own playtest is required and comes first — not filled in by Claude. Suggested focus: can you read the hop-then-commit decision before your first failure; which route do you take off the old ledge (edge hop vs. early full jump); does a 32 px Landing 1 feel fair; does the Cardinal read as a bird at 1×; is the bird readable next to the spikes.]
+**Author playtest** — played the built game, after the body color fix, as the author.
+
+Observed:
+- Controls worked as expected: Enter, A/D and arrow keys, Space, R, and Esc/P.
+- Falling to a hazard triggered retry and respawn via R, and play continued forward through the level normally afterward.
+- The HUD progress percentage tracked correctly throughout, including through the new section.
+- Progressed through the Two-Step Crossing and reached the relocated flag, which correctly ended the level.
+
+Not specifically observed (not confirmed either way):
+- How early the hop-then-commit decision reads before a first failure.
+- Which route was taken off the original ledge.
+- Beak legibility against the new orange body during live play.
+- Whether the hint text is distracting mid-air.
