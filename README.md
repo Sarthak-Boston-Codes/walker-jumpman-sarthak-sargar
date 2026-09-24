@@ -29,4 +29,4 @@ Enter to start · A/D or arrow keys to move · Space to jump · R to retry · Es
 - **HUD reads ~99.2% at flag trigger.** The finish triggers when the collider touches the flag, slightly before the progress span ends. Cosmetic; not fixed.
 
 ## Final film
-[link — add once the Brutalist walkthrough is rendered]
+Not yet rendered. The link to the Brutalist walkthrough will be added here once it is recorded.
