@@ -43,7 +43,8 @@ Honest build log. Specific accounts of what was tried and what actually happened
 - `9cdadbb` — CHANGE-BRIEF.md Revisions entry for the color change.
 - `0007b1f` — author playtest (TEST-REPORT.md, the entries above) and README.md known limitations.
 - `dbceab3` — this Human / AI contribution and Traceability write-up.
-- The next commit records `dbceab3` here and as TEST-REPORT.md's source revision (a commit can't contain its own SHA).
+- `6d8f175` — records `dbceab3` here and as TEST-REPORT.md's source revision (a commit can't contain its own SHA).
+- `6cd0cb4` — README.md Final film section: status note that the walkthrough is not yet rendered.
 
 **Decisions and the records that back them**
 | Decision | CHANGE-BRIEF.md Revisions | TEST-REPORT.md | Commit |
