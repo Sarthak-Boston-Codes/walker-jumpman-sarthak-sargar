@@ -1,6 +1,6 @@
 # TEST-REPORT.md
 
-Source revision: uncommitted working tree on top of `f2933f2` — replace with the commit SHA once committed
+Source revision: `dbceab3` on branch `extension/cardinal-two-step-crossing` (game source last changed in `31eca6a`; later commits are documentation only)
 Engine version: Godot 4.7.2 (stable), `4.7.2.stable.official.ed1daf0bf`, Windows 11, Compatibility renderer
 
 Machine checks below were run by Claude Code on 2026-09-24. They verify mechanics and presentation facts; they are not a playtest and make no claim about fun, fairness, or clarity for a new player.

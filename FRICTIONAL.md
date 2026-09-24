@@ -42,7 +42,8 @@ Honest build log. Specific accounts of what was tried and what actually happened
 - `31eca6a` — Cardinal body color `e0532f` → `f07a2a`.
 - `9cdadbb` — CHANGE-BRIEF.md Revisions entry for the color change.
 - `0007b1f` — author playtest (TEST-REPORT.md, the entries above) and README.md known limitations.
-- The commit that adds this section — SHA recorded in the follow-up commit.
+- `dbceab3` — this Human / AI contribution and Traceability write-up.
+- The next commit records `dbceab3` here and as TEST-REPORT.md's source revision (a commit can't contain its own SHA).
 
 **Decisions and the records that back them**
 | Decision | CHANGE-BRIEF.md Revisions | TEST-REPORT.md | Commit |
