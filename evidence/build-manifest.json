@@ -1,61 +1,69 @@
 {
   "project": "walker-jumpman",
-  "build_id": "1f03828eef29e170b5132a831c43201a7b11978d2c2087fa15bd948d0f44488d",
-  "created_at": "2026-09-10T22:39:09.411Z",
+  "build_id": "ea884c10828d9fb44b9bfd9f4f3627337150dceafbddd2afb9a84d9cc8828320",
+  "created_at": "2026-09-24T20:04:26.451Z",
   "engine": "4.7.2.stable.official.ed1daf0bf",
   "renderer": "Compatibility",
-  "scope": "First Steps local control/retry slice",
+  "scope": "First Steps local control/retry slice + Cardinal / Two-Step Crossing extension",
   "source_sha256": {
-    "godot/.gitignore": "531d0d253cec1addb97b2cb2d144b6589ff934513eb9c9b8cf882cb49e4c0c32",
-    "godot/features/player/player.gd": "cb79bad716078657d25a0c15b2a03ddfa75b934497f3382418ca99004f992f96",
-    "godot/features/player/player.gd.uid": "be96c2e71cbd69482fa0d107dfb1500a0054d2b963e9ba312e265bef985f0454",
-    "godot/features/player/tuning.gd": "7a09e96ef11bfa3e1e3b00849e84ed15b453a2e2780b9c94c90c376aea62aa37",
-    "godot/features/player/tuning.gd.uid": "9411c240407f1c4afbb5e85649ef3215765190421bc3621a7457e065e036751a",
-    "godot/game/main.tscn": "017da6e141ad6f6199a9219208483c82cacd257210dbaa6b1184a27157a63a2f",
-    "godot/game/session.gd": "4b4fc42f56416806b8ad64c6c9da938165fb2f8c5b78bc2169ba68a2bf161276",
-    "godot/game/session.gd.uid": "cbd9b4dc192752918a54c94b364b7891028856b6de6a4391d924522985ffeb77",
-    "godot/levels/first_steps.json": "33b9b5c8dd0f0eaf162feed7533dd0d7774dd1e6cd9c9b6f353a849473a23d20",
-    "godot/project.godot": "4296d7e5e84ef36a7147c211a78b78eaca38252401fd38abb6b2d9460a1ac840",
-    "godot/tests/capture_game.gd": "5bc82d2360e3758fd8d2f187ee15ddef0cc9afb6da0a7f3b4f37d660d8cff79f",
-    "godot/tests/route_driver.gd": "21996742044648210c75c6ca56f45f9e2264a45b5d09f8fe214055c047476cb3",
-    "godot/tests/test_game.gd": "f41b7299da7cb1003653851749b25f464e48d0e26096e91015a270f83ae26cf4",
-    "godot/tests/test_keyboard.gd": "39b5d37039cee469aa6a87ab45acc852d1c55a7ebcebca5ec328d9d71413c6c9",
-    "godot/ui/hud.gd": "6cdf5b19f3b4684e8375c9db2c595031f76e862ccaa015098d4eb97ea2805e55",
-    "godot/ui/hud.gd.uid": "d2eaf3c885a55bcd31e9b2f36d3a5355f10105da426e96a9685434da00b28330",
-    "walker-jumpman.command": "4adbb8884b6c05bdba97f2b4919e97e7e351a0bd2446ac7e05d6d8b250041c79"
+    "godot\\.gitignore": "7a86efd9a3426b8ce1e6d5fb19dbf79acd3d59eb5b2e8f020e4912be6b1e9580",
+    "godot\\features\\player\\player.gd": "7fd500e8c71ef0568b535452d99de9b598b2dec427182e069b4b35b7dac5405d",
+    "godot\\features\\player\\player.gd.uid": "b45c2eced704a961fca9a606f67e540cfe5adc31a95c9471a926299e04adbad4",
+    "godot\\features\\player\\tuning.gd": "e901609824efb4b8c1abed2c5f53bd1cc9f025a05d80393e0aafaa4df997aea7",
+    "godot\\features\\player\\tuning.gd.uid": "d43ccec1e5fd8a38b4d8580fc3265e94257822b8c04eb8e9a9a3fc5d5f9b0156",
+    "godot\\game\\main.tscn": "964cbd83886f1f53c037fdf0ded10826cad7b6ac030dff977fe528e9455b85bf",
+    "godot\\game\\session.gd": "fc0a8ef8bc8e053e680dc25c02db138d34233e4b702c42037cad88f1d6369fd6",
+    "godot\\game\\session.gd.uid": "f37be3ae50b15896d96de46df1765b99ebddc3f10b7df011c992377480088ea6",
+    "godot\\levels\\first_steps.json": "9abeabb6676ff44e4ad6c02495e8703ca1a1fd6af31cd8933ba7d1e91d379d2f",
+    "godot\\project.godot": "18b80fb608279ceda4a94c998aea4ec6f5bb8d79c1969a9a6c4ac7a1552e47cf",
+    "godot\\tests\\capture_game.gd": "ffce63ad47c98c0fd80a6901ae85dd74a65a7d120171a09b28511d7c42b98c5f",
+    "godot\\tests\\capture_game.gd.uid": "55beb5c29d62ee66b8516f93319d8475ac4724f69e2361bcf8406a696af3b86e",
+    "godot\\tests\\route_driver.gd": "7dbd70191468b85d1b0e8eeaffc02774361051916e1cdad34d48fe22c7d93d1b",
+    "godot\\tests\\route_driver.gd.uid": "6a38e2aa3139c52d38b93d0be27d84922ddb46bc57448fa69f903ccfd0fec280",
+    "godot\\tests\\test_game.gd": "399d008dd925e3c6f47e52bbbc4688ca50105dc78c32270cbf058945232d8f65",
+    "godot\\tests\\test_game.gd.uid": "686f4207f3b151d4804717855f048696268c06f2f029e72fdf52375e31bd97f7",
+    "godot\\tests\\test_keyboard.gd": "d67b19084fce78af34e4b4accbfd6dfb548dca494198e546aae1c47d44bf3c94",
+    "godot\\tests\\test_keyboard.gd.uid": "43405b4a897f19b7b80c0182fdd95419acb07d247330538746f570a1b173554b",
+    "godot\\ui\\hud.gd": "3c0c9c2f3051846b1f81915a67316a2eb2d1fa0074e3dfb185febb2b6c992f88",
+    "godot\\ui\\hud.gd.uid": "0d4ec45a976c063906226589fedacc648b4d370d0c167d31cd404821ecbadfe1",
+    "walker-jumpman.command": "cd6d92e7b1603b449589f7a1aacabcc518137c70621f261a3ffaec8ec5f8d88a"
   },
   "tests": [
     {
-      "file": "evidence/mechanics-1789079935.62795.json",
-      "checks": 25,
+      "file": "evidence/mechanics-1790280229.274.json",
+      "checks": 35,
       "failures": 0
     },
     {
-      "file": "evidence/keyboard-1789079926.01266.json",
+      "file": "evidence/keyboard-1790280178.432.json",
       "checks": 9,
       "failures": 0
     }
   ],
-  "machine_checks_passed": 34,
+  "machine_checks_passed": 44,
   "human_playtest_sessions": 0,
   "exported": false,
   "game_published": false,
   "screenshots": [
     {
       "file": "evidence/screens/01-menu.png",
-      "sha256": "c05b5b81c05fa03e6eec9422f2867e7a0fd7b09704436290a5fcf27f5a5d972a"
+      "sha256": "86a2a4b7d03bf050f9bc49e29151b5e52b1ea0223ecfef29fc2b8108f0705fbe"
     },
     {
       "file": "evidence/screens/02-failure.png",
-      "sha256": "4807fda15f88216d458246c3724a3d0f5f100bf73bcee647782f1f018157c1b7"
+      "sha256": "fe7c4edcad938e51f71f03f1d397ac6b80fdf5b8168c89032d708b3c26950c5a"
     },
     {
       "file": "evidence/screens/03-jump.png",
-      "sha256": "6c48b444cda58509e92154a9364c03d21258087a0e57b7a85f0e5fda9c2bcfa2"
+      "sha256": "d98ca4dc9976f698f41224227fe56ef63e395eb4f3f1ca411e1dfe7f122da2d3"
     },
     {
       "file": "evidence/screens/04-complete.png",
-      "sha256": "e10a8849fb0db21da92b6a7a771182dd3534d7b5a08e4c03e4275819df169701"
+      "sha256": "aabffa83ab9c666a5f979352caa880ed2373ba0f21a5451f1081c155f3e465eb"
+    },
+    {
+      "file": "evidence/screens/05-crossing.png",
+      "sha256": "c60ed111393b6ffc88b1db6ab98139d1fa82bb80f86dc8b5f9768a0631bee885"
     }
   ]
 }

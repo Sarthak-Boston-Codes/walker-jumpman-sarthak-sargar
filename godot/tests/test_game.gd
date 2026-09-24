@@ -30,6 +30,32 @@ func fresh() -> void:
 	game.player.test_control = true
 	await steps(3)
 
+# Real-input jump trial: stand at start_x, run right, jump at jump_x, hold right
+# for `hold` ticks after takeoff (-1 = until landing), then release and settle.
+func technique(start_x: float, jump_x: float, hold: int) -> Dictionary:
+	await fresh()
+	var p = game.player
+	p.position = Vector2(start_x, 320)
+	await steps(3)
+	p.test_axis = 1
+	var air := -1
+	for i in range(240):
+		if air < 0 and p.position.x >= jump_x and p.is_on_floor():
+			p.test_jump_pressed = true
+			air = 0
+		await steps(1)
+		if air >= 0:
+			air += 1
+			if hold >= 0 and air > hold:
+				p.test_axis = 0
+			if air > 3 and p.is_on_floor():
+				p.test_axis = 0
+				await steps(12)
+				break
+		if game.state != Game.State.PLAYING:
+			break
+	return {"state":game.state, "x":p.position.x, "on_floor":p.is_on_floor()}
+
 func run() -> void:
 	await fresh()
 	check("launch-grounded", game.player.is_on_floor() and game.state == Game.State.PLAYING, {"position": str(game.player.position), "engine": Engine.get_version_info().string})
@@ -62,6 +88,14 @@ func run() -> void:
 	check("fixed-jump-and-no-double", game.player.jumps == 1 and absf((320-min_y)-53.3333) < 5, {"rise_px":320-min_y, "jumps":game.player.jumps})
 	await steps(30)
 	check("held-jump-no-bounce", game.player.jumps == 1 and game.player.is_on_floor(), {"jumps":game.player.jumps})
+	await fresh()
+	var grounded_closed: bool = not game.player.wings_open()
+	game.player.test_jump_pressed = true
+	await steps(10)
+	var airborne_open: bool = game.player.wings_open()
+	await steps(40)
+	var landed_closed: bool = not game.player.wings_open() and game.player.is_on_floor()
+	check("wing-pose-follows-floor", grounded_closed and airborne_open and landed_closed, {"grounded_closed":grounded_closed,"airborne_open":airborne_open,"landed_closed":landed_closed})
 	# Actual geometry fixtures at a ledge; tick ages exercise inclusive 6 / expired 7.
 	for age in [5,6,7]:
 		await fresh()
@@ -125,6 +159,36 @@ func run() -> void:
 	game.player.position = Vector2(415,432)
 	await steps(1)
 	check("fall-boundary", game.state == Game.State.DYING, {"state":game.state})
+	# Two-Step Crossing: original geometry intact, then both techniques each way.
+	var original_solids := [[0, 320, 448, 64], [512, 320, 224, 64], [784, 320, 176, 64], [160, 304, 48, 16], [576, 288, 48, 32]]
+	var level_solids: Array = game.level.solids.slice(0, 5).map(func(s): return s.map(func(v): return int(v)))
+	var first_hazard: Array = game.level.hazards[0].map(func(v): return int(v))
+	check("original-geometry-intact", level_solids == original_solids and first_hazard == [320, 304, 24, 16], {"solids":level_solids,"hazard":first_hazard})
+	var t: Dictionary = await technique(850, 955, -1)
+	check("full-hold-off-ledge-edge-overshoots", t.state == Game.State.DYING, t)
+	t = await technique(850, 955, 22)
+	check("short-hop-lands-landing-1", t.state == Game.State.PLAYING and t.on_floor and t.x >= 1007 and t.x <= 1057, t)
+	t = await technique(1016, 1048, 16)
+	check("short-hop-from-landing-1-fails", t.state == Game.State.DYING, t)
+	t = await technique(1016, 1048, -1)
+	check("full-jump-from-landing-1-clears-spike", t.state == Game.State.PLAYING and t.on_floor and t.x > 1137, t)
+	await fresh()
+	game.player.position = Vector2(920, 320)
+	await steps(10)
+	check("old-finish-is-pass-through", game.state == Game.State.PLAYING, {"state":game.state})
+	game.player.position = Vector2(1030, 320)
+	await steps(3)
+	var view := Rect2(game.camera.position - Vector2(320, 180), Vector2(640, 360))
+	var f: Array = game.level.finish
+	var spike: Array = game.level.hazards[1]
+	var ahead_visible: bool = view.encloses(Rect2(f[0], f[1], f[2], f[3])) and view.encloses(Rect2(spike[0], spike[1], spike[2], spike[3]))
+	check("camera-shows-landing-2-from-landing-1", is_equal_approx(game.camera.position.x, float(game.level.width) - 320) and ahead_visible, {"camera_x":game.camera.position.x,"view":str(view)})
+	var percent := {}
+	for x in [916.0, 1030.0, 1236.0]:
+		game.player.position.x = x
+		percent[str(int(x))] = game.hud.progress()
+	check("hud-below-100-at-old-finish", percent["916"] < 0.8 and percent["1030"] < 1.0, percent)
+	check("hud-100-at-new-finish", is_equal_approx(percent["1236"], 1.0), percent)
 	await fresh()
 	var route = Route.new()
 	var route_ticks := 0

@@ -26,6 +26,16 @@ Nine additional passing keyboard checks inject key events through Godot's Input 
 
 A source-only copy at `/tmp/walker-jumpman-clean.yrT1x4`, excluding `.godot/`, passed a fresh editor import and normal main-scene launch (both exit 0). The canonical game was then launched for Bear. All 17 recorded source hashes still match; the protected original project's configuration hash is unchanged.
 
+## Extension build — Cardinal / Two-Step Crossing (September 24, 2026)
+
+Everything above describes the starter slice as delivered. This extension is described in CHANGE-BRIEF.md; the original two zones, tuning, collider, controls, and state handling are unchanged.
+
+- **Character:** the rectangle-stack runner is replaced by the Cardinal (rounded body, beak, crest, wings that open while airborne). Drawing only; the 18×28 collider is unchanged.
+- **Level:** width 960 → 1280. New Landing 1 `[1016, 320, 32, 16]`, spike `[1104, 304, 24, 16]`, Landing 2 `[1104, 320, 176, 64]`, finish moved to x = 1236.
+- **Presentation:** background grid and rect follow `level.width`; "FINISH" follows the flag; new section label and hint; menu copy no longer says "two gaps". HUD progress now derives from spawn and finish. The camera needed no change.
+
+Re-run on Godot 4.7.2.stable.official.ed1daf0bf, Windows 11: **35 mechanics checks / 0 failures** ([report](evidence/mechanics-1790280229.274.json)), **9 keyboard checks / 0 failures** ([report](evidence/keyboard-1790280178.432.json)), five rendered-viewport screenshots including `05-crossing.png`, and a clean main-scene launch. Known input route: zero deaths, seven jumps, **466 ticks** (~7.8 s). Jump rise is unchanged. See TEST-REPORT.md for per-check detail, inspect-and-revise notes, and open issues. Human playtesting is still outstanding.
+
 ## Repeat the local checks
 
 From this package, run Godot with `--headless --path godot --script res://tests/test_game.gd`, then `res://tests/test_keyboard.gd`. The visual capture uses `--path godot --script res://tests/capture_game.gd` without headless mode and saves the engine's rendered viewport, not a desktop screenshot. After passing checks, `node scripts/record-build.cjs` records the source snapshot. [The launcher](walker-jumpman.command) runs the normal main scene, not a test driver.

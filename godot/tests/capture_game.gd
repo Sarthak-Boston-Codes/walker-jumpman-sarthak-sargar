@@ -39,14 +39,20 @@ func run() -> void:
 	game.start_session()
 	var route = Route.new()
 	var gap_captured := false
+	var crossing_captured := false
 	for i in range(900):
 		route.step(game.player)
 		await step()
 		if not gap_captured and game.player.position.x > 463 and game.player.position.y < 300:
 			await capture("03-jump")
 			gap_captured = true
+		# Standing on Landing 1: spike, Landing 2, and the relocated flag must be in view.
+		if not crossing_captured and game.player.position.x > 1010 and game.player.is_on_floor():
+			await capture("05-crossing")
+			crossing_captured = true
 		if game.state != Game.State.PLAYING: break
 	assert(game.state == Game.State.COMPLETE, "Input route did not complete")
+	assert(crossing_captured, "Route never stood on Landing 1")
 	await capture("04-complete")
 	print("VISUAL ROUTE: completed with %d deaths" % game.deaths)
 	game.queue_free()

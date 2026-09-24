@@ -1,0 +1,324 @@
+{
+  "created_at": "2026-09-24T19:24:04",
+  "engine": "4.7.2-stable (official)",
+  "failures": 0,
+  "results": [
+    {
+      "id": "launch-grounded",
+      "observed": {
+        "engine": "4.7.2-stable (official)",
+        "position": "(64.0, 320.0)"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "speed-cap",
+      "observed": {
+        "velocity_x": 160.0
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "neutral-stop",
+      "observed": {
+        "velocity_x": 0.0
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "simultaneous-directions",
+      "observed": {
+        "velocity_x": 0.0
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "left-wall",
+      "observed": {
+        "x": 10.0
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "fixed-jump-and-no-double",
+      "observed": {
+        "jumps": 1,
+        "rise_px": 56.07470703125
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "held-jump-no-bounce",
+      "observed": {
+        "jumps": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "wing-pose-follows-floor",
+      "observed": {
+        "airborne_open": true,
+        "grounded_closed": true,
+        "landed_closed": true
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "coyote-5",
+      "observed": {
+        "age": 5,
+        "jumps": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "coyote-6",
+      "observed": {
+        "age": 6,
+        "jumps": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "coyote-7",
+      "observed": {
+        "age": 7,
+        "jumps": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "buffer-5",
+      "observed": {
+        "age": 5,
+        "jumps": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "buffer-6",
+      "observed": {
+        "age": 6,
+        "jumps": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "buffer-7",
+      "observed": {
+        "age": 7,
+        "jumps": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "low-ceiling",
+      "observed": {
+        "jumps": 1,
+        "minimum_feet_y": 300.000274658203
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "pause-freezes",
+      "observed": {
+        "elapsed": 0.133333333333333,
+        "position": "(64.0, 295.9253)"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "focus-loss-pauses",
+      "observed": {
+        "state": 2
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "actual-spike-collision",
+      "observed": {
+        "deaths": 1,
+        "state": 3
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "duplicate-death-ignored",
+      "observed": {
+        "deaths": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "respawn",
+      "observed": {
+        "position": "(64.0, 320.0)",
+        "state": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "manual-restart-not-death",
+      "observed": {
+        "deaths": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "twenty-retries",
+      "observed": {
+        "deaths": 21,
+        "max_retry_ticks": 34
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "death-before-finish",
+      "observed": {
+        "state": 3
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "fall-boundary",
+      "observed": {
+        "state": 3
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "original-geometry-intact",
+      "observed": {
+        "hazard": [
+          320,
+          304,
+          24,
+          16
+        ],
+        "solids": [
+          [
+            0,
+            320,
+            448,
+            64
+          ],
+          [
+            512,
+            320,
+            224,
+            64
+          ],
+          [
+            784,
+            320,
+            176,
+            64
+          ],
+          [
+            160,
+            304,
+            48,
+            16
+          ],
+          [
+            576,
+            288,
+            48,
+            32
+          ]
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "full-hold-off-ledge-edge-overshoots",
+      "observed": {
+        "on_floor": false,
+        "state": 3,
+        "x": 1097.05859375
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "short-hop-lands-landing-1",
+      "observed": {
+        "on_floor": true,
+        "state": 1,
+        "x": 1022.62384033203
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "short-hop-from-landing-1-fails",
+      "observed": {
+        "on_floor": false,
+        "state": 3,
+        "x": 1100.62158203125
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "full-jump-from-landing-1-clears-spike",
+      "observed": {
+        "on_floor": true,
+        "state": 1,
+        "x": 1167.28735351563
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "old-finish-is-pass-through",
+      "observed": {
+        "state": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "camera-shows-landing-2-from-landing-1",
+      "observed": {
+        "camera_x": 960.0,
+        "view": "[P: (640.0, 0.0), S: (640.0, 360.0)]"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hud-below-100-at-old-finish",
+      "observed": {
+        "1030": 0.824232081911263,
+        "1236": 1.0,
+        "916": 0.726962457337884
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hud-100-at-new-finish",
+      "observed": {
+        "1030": 0.824232081911263,
+        "1236": 1.0,
+        "916": 0.726962457337884
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "complete-real-route",
+      "observed": {
+        "deaths": 0,
+        "jump_marks_used": 7,
+        "position": "(1234.838, 319.9253)",
+        "state": 4,
+        "ticks": 466
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "replay-idempotent",
+      "observed": {
+        "deaths": 0,
+        "jumps": 0,
+        "state": 1
+      },
+      "status": "PASS"
+    }
+  ],
+  "scope": "First Steps slice; not full GDD acceptance or human playtesting"
+}

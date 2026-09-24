@@ -13,6 +13,12 @@ func centered(text: String, y: float, font_size: int, color: Color = INK) -> voi
 	var width := ThemeDB.fallback_font.get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size).x
 	text_at(text, Vector2((640-width)/2, y), font_size, color)
 
+## Share of the run from spawn to the finish flag, derived from level data.
+func progress() -> float:
+	var start: float = game.level.spawn[0]
+	var finish: float = game.level.finish[0]
+	return clampf((game.player.position.x - start) / (finish - start), 0, 1)
+
 func _draw() -> void:
 	if not is_instance_valid(game):
 		return
@@ -21,8 +27,7 @@ func _draw() -> void:
 	text_at("FIRST STEPS", Vector2(497,27), 14)
 	text_at("A/D or arrows: move     Space: jump     R: retry     Esc: pause", Vector2(22,50), 13)
 	draw_rect(Rect2(22,63,596,3), Color("daddd6"))
-	var progress: float = clampf((game.player.position.x-64)/852, 0, 1)
-	draw_rect(Rect2(22,63,596*progress,3), Color("287c68"))
+	draw_rect(Rect2(22,63,596*progress(),3), Color("287c68"))
 	draw_rect(Rect2(0,335,640,25), Color("f6f3ec"))
 	text_at("No lives. Just another try.", Vector2(22,353), 13)
 	text_at("RETRIES %02d     %04.1fs" % [game.deaths, game.elapsed], Vector2(440,353), 13)
@@ -37,7 +42,7 @@ func _draw() -> void:
 	draw_rect(Rect2(163,103,318,159), Color("fffdf7"))
 	draw_rect(Rect2(163,103,318,4), Color("ef875f"))
 	var title := "First steps. Real jumps."
-	var detail := "Cross two gaps. Clear the spikes. Reach the flag."
+	var detail := "Cross the gaps. Clear the spikes. Reach the flag."
 	var button := "ENTER  /  START"
 	if game.state == game.State.PAUSED:
 		title = "Take a breath."
