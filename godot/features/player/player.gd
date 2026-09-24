@@ -85,6 +85,8 @@ func _draw() -> void:
 	# Cardinal: rounded scout-bird drawn inside the unchanged 18x28 collider.
 	var ink := Color("25354a")
 	var red := Color("e0532f")
+	# Body is shifted toward orange so it separates from the spike red (d24e42).
+	var body_color := Color("f07a2a")
 	var wing := Color("a8321f")
 	var stride := sin(float(tick) * 0.7) * 2.0 if is_on_floor() and absf(velocity.x) > 8 else 0.0
 	draw_rect(Rect2(-6, -4, 5, 4 + stride), ink)
@@ -94,7 +96,7 @@ func _draw() -> void:
 	for crest in [[-5, -8], [-2, -9], [1, -8]]:
 		draw_colored_polygon(_facing([Vector2(crest[0], -24), Vector2(crest[0] - 1, -24 + crest[1]), Vector2(crest[0] + 3, -25)]), red)
 	var body := _facing([Vector2(2, -26), Vector2(6, -24), Vector2(8, -20), Vector2(8, -14), Vector2(7, -9), Vector2(4, -5), Vector2(-1, -4), Vector2(-6, -5), Vector2(-10, -8), Vector2(-8, -13), Vector2(-8, -19), Vector2(-6, -24), Vector2(-2, -26)])
-	draw_colored_polygon(body, red)
+	draw_colored_polygon(body, body_color)
 	var outline := body.duplicate()
 	outline.append(body[0])
 	draw_polyline(outline, ink, 1.5)

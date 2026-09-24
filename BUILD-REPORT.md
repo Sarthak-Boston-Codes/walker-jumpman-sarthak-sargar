@@ -30,11 +30,11 @@ A source-only copy at `/tmp/walker-jumpman-clean.yrT1x4`, excluding `.godot/`, p
 
 Everything above describes the starter slice as delivered. This extension is described in CHANGE-BRIEF.md; the original two zones, tuning, collider, controls, and state handling are unchanged.
 
-- **Character:** the rectangle-stack runner is replaced by the Cardinal (rounded body, beak, crest, wings that open while airborne). Drawing only; the 18×28 collider is unchanged.
+- **Character:** the rectangle-stack runner is replaced by the Cardinal (rounded body, beak, crest, wings that open while airborne), with an orange body (`f07a2a`) chosen to separate from the spike red. Drawing only; the 18×28 collider is unchanged.
 - **Level:** width 960 → 1280. New Landing 1 `[1016, 320, 32, 16]`, spike `[1104, 304, 24, 16]`, Landing 2 `[1104, 320, 176, 64]`, finish moved to x = 1236.
 - **Presentation:** background grid and rect follow `level.width`; "FINISH" follows the flag; new section label and hint; menu copy no longer says "two gaps". HUD progress now derives from spawn and finish. The camera needed no change.
 
-Re-run on Godot 4.7.2.stable.official.ed1daf0bf, Windows 11: **35 mechanics checks / 0 failures** ([report](evidence/mechanics-1790280229.274.json)), **9 keyboard checks / 0 failures** ([report](evidence/keyboard-1790280178.432.json)), five rendered-viewport screenshots including `05-crossing.png`, and a clean main-scene launch. Known input route: zero deaths, seven jumps, **466 ticks** (~7.8 s). Jump rise is unchanged. See TEST-REPORT.md for per-check detail, inspect-and-revise notes, and open issues. Human playtesting is still outstanding.
+Re-run on Godot 4.7.2.stable.official.ed1daf0bf, Windows 11: **35 mechanics checks / 0 failures** ([report](evidence/mechanics-1790280443.662.json)), **9 keyboard checks / 0 failures** ([report](evidence/keyboard-1790280445.224.json)), five rendered-viewport screenshots including `05-crossing.png`, and a clean main-scene launch. Known input route: zero deaths, seven jumps, **466 ticks** (~7.8 s). Jump rise is unchanged. See TEST-REPORT.md for per-check detail, inspect-and-revise notes, and open issues. Human playtesting is still outstanding.
 
 ## Repeat the local checks
 

@@ -19,6 +19,7 @@ Claude Code (2026-09-24), each step approved before implementation:
 - **Step 3:** HUD progress from level data, with two checks.
 - **Step 4:** regenerated evidence and screenshots, updated these reports, added `05-crossing` to the build record.
 - **Follow-up (student request):** menu copy "Cross two gaps." → "Cross the gaps."
+- **Follow-up (student request):** Cardinal body fill `e0532f` → `f07a2a` for contrast against the spike red; Claude compared candidate colors by contrast ratio against the spike, beak, and wing and chose the balance point.
 
 [Student: add what you modified by hand after these steps, and anything you rejected.]
 

@@ -1,13 +1,13 @@
 {
   "project": "walker-jumpman",
-  "build_id": "ea884c10828d9fb44b9bfd9f4f3627337150dceafbddd2afb9a84d9cc8828320",
-  "created_at": "2026-09-24T20:04:26.451Z",
+  "build_id": "32f088a4dd437c1ca2ac2e36dbdb46b98092fbce96d870f3c08754bc6dd0b31c",
+  "created_at": "2026-09-24T20:08:10.055Z",
   "engine": "4.7.2.stable.official.ed1daf0bf",
   "renderer": "Compatibility",
   "scope": "First Steps local control/retry slice + Cardinal / Two-Step Crossing extension",
   "source_sha256": {
     "godot\\.gitignore": "7a86efd9a3426b8ce1e6d5fb19dbf79acd3d59eb5b2e8f020e4912be6b1e9580",
-    "godot\\features\\player\\player.gd": "7fd500e8c71ef0568b535452d99de9b598b2dec427182e069b4b35b7dac5405d",
+    "godot\\features\\player\\player.gd": "02c56041bea528a0c0c5b1f25a8b30facd3eed1b4cbfa09c1b976e6b1d234533",
     "godot\\features\\player\\player.gd.uid": "b45c2eced704a961fca9a606f67e540cfe5adc31a95c9471a926299e04adbad4",
     "godot\\features\\player\\tuning.gd": "e901609824efb4b8c1abed2c5f53bd1cc9f025a05d80393e0aafaa4df997aea7",
     "godot\\features\\player\\tuning.gd.uid": "d43ccec1e5fd8a38b4d8580fc3265e94257822b8c04eb8e9a9a3fc5d5f9b0156",
@@ -30,12 +30,12 @@
   },
   "tests": [
     {
-      "file": "evidence/mechanics-1790280229.274.json",
+      "file": "evidence/mechanics-1790280443.662.json",
       "checks": 35,
       "failures": 0
     },
     {
-      "file": "evidence/keyboard-1790280178.432.json",
+      "file": "evidence/keyboard-1790280445.224.json",
       "checks": 9,
       "failures": 0
     }
@@ -47,23 +47,23 @@
   "screenshots": [
     {
       "file": "evidence/screens/01-menu.png",
-      "sha256": "86a2a4b7d03bf050f9bc49e29151b5e52b1ea0223ecfef29fc2b8108f0705fbe"
+      "sha256": "464f3657170b4266ffe130d736b5c78e1f862b9f8ec746c55c11ce831497e482"
     },
     {
       "file": "evidence/screens/02-failure.png",
-      "sha256": "fe7c4edcad938e51f71f03f1d397ac6b80fdf5b8168c89032d708b3c26950c5a"
+      "sha256": "dba64dd718d041d3da4f17a9fdc27c6022a991674f28b6e0d64721d97cd6e736"
     },
     {
       "file": "evidence/screens/03-jump.png",
-      "sha256": "d98ca4dc9976f698f41224227fe56ef63e395eb4f3f1ca411e1dfe7f122da2d3"
+      "sha256": "bf6a0710ae2e227294645de73e2f752ddf33fc1474cd1a42499ce3dffc3488b7"
     },
     {
       "file": "evidence/screens/04-complete.png",
-      "sha256": "aabffa83ab9c666a5f979352caa880ed2373ba0f21a5451f1081c155f3e465eb"
+      "sha256": "8beed72f74d9df8908e2b3139e55fca4889ed0945094f2c1509b16116eed10dc"
     },
     {
       "file": "evidence/screens/05-crossing.png",
-      "sha256": "c60ed111393b6ffc88b1db6ab98139d1fa82bb80f86dc8b5f9768a0631bee885"
+      "sha256": "8b3e9ebd91af1ff70234740858f973a1d74764b8068b23f711f09e3d7717d1b9"
     }
   ]
 }
