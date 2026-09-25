@@ -45,6 +45,8 @@ Honest build log. Specific accounts of what was tried and what actually happened
 - `dbceab3` — this Human / AI contribution and Traceability write-up.
 - `6d8f175` — records `dbceab3` here and as TEST-REPORT.md's source revision (a commit can't contain its own SHA).
 - `6cd0cb4` — README.md Final film section: status note that the walkthrough is not yet rendered.
+- `55709ee` — .gitignore: keep the local walkthrough reel folder (4K captures, render work) out of the repository.
+- `e703033` — README.md Final film link and completed SUBMISSION.md (film URL, filename, SHA-256, revision, environment, limitations).
 
 **Decisions and the records that back them**
 | Decision | CHANGE-BRIEF.md Revisions | TEST-REPORT.md | Commit |
