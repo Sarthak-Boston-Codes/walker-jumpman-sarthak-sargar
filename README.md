@@ -29,4 +29,4 @@ Enter to start · A/D or arrow keys to move · Space to jump · R to retry · Es
 - **HUD reads ~99.2% at flag trigger.** The finish triggers when the collider touches the flag, slightly before the progress span ends. Cosmetic; not fixed.
 
 ## Final film
-Not yet rendered. The link to the Brutalist walkthrough will be added here once it is recorded.
+[claude-liam-walker-jumpman-walkthrough.mp4](https://northeastern-my.sharepoint.com/:v:/g/personal/sargar_s_northeastern_edu/IQAI6TLJ44oVTpC0t40GsbD_ASeZmowyjVz6L6keweiPBq8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=pLeb0A) (OneDrive)
