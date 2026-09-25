@@ -13,6 +13,9 @@
 exports/
 builds/
 
+# Walkthrough reel: 4K captures and render work stay local.
+youtube/claude-liam-walker-jumpman-walkthrough/
+
 # Local credentials/configuration
 .env
 .env.*
