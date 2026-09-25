@@ -1,8 +1,6 @@
-# walker-jumpman-ss
+# walker-jumpman-sarthak-sargar
 
 Extension of [nikbearbrown/walker-jumpman](https://github.com/nikbearbrown/walker-jumpman) ("First Steps") by Nik Bear Brown — not a new game. Built for CSYE 7270, Assignment 1.
-
-(Project name is a placeholder — keep the `walker-` prefix, swap `ss` for whatever suffix you actually use.)
 
 ## Starter credit
 Base project, movement model, session/state-machine structure, and level format: nikbearbrown/walker-jumpman, Godot 4.7.2. This repository extends it; it does not replace it. See SOURCES.md for the exact original-vs-new split.

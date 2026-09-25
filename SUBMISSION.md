@@ -1,6 +1,6 @@
 Assignment: Assignment 1 - Extend Walker Jumpman
 Student: Sarthak Sargar
-Project name: walker-jumpman-ss
+Project name: walker-jumpman-sarthak-sargar
 GitHub repository/folder URL: https://github.com/Sarthak-Boston-Codes/walker-jumpman-sarthak-sargar
 Submitted commit SHA: (this commit — see Canvas submission note)
 Game-source revision shown in the film: 31eca6a
